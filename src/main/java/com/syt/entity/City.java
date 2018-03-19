@@ -4,7 +4,7 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- *
+ *这是城市信息的模型，添加一些注释
  */
 @ApiModel(description= "返回城市的响应数据")
 public class City {
