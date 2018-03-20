@@ -9,8 +9,11 @@ import io.swagger.annotations.ApiModelProperty;
 @ApiModel(description= "返回响应数据")
 public class Result<T> {
 	
-	@ApiModelProperty(value = "是否成功标志")
-	private boolean success;
+//	@ApiModelProperty(value = "是否成功标志")
+//	private boolean success;
+	
+	@ApiModelProperty(value = "返回码，正常返回为 1")
+	private int code;
 	
 	@ApiModelProperty(value = "成功时返回的数据")
 	private T data;
@@ -22,24 +25,24 @@ public class Result<T> {
 	}
 
 	// 成功时的构造器
-	public Result(boolean success, T data) {
-		this.success = success;
+	public Result(int code, T data) {
+		this.code = code;
 		this.data = data;
 	}
 
 	// 错误时的构造器
-	public Result(boolean success, String error) {
-		this.success = success;
+	public Result(int code, String error) {
+		this.code = code;
 		this.error = error;
 	}
 
-	public boolean isSuccess() {
-		return success;
-	}
-
-	public void setSuccess(boolean success) {
-		this.success = success;
-	}
+//	public boolean isSuccess() {
+//		return success;
+//	}
+//
+//	public void setSuccess(boolean success) {
+//		this.success = success;
+//	}
 
 	public T getData() {
 		return data;
@@ -56,5 +59,15 @@ public class Result<T> {
 	public void setError(String error) {
 		this.error = error;
 	}
+
+	public int getCode() {
+		return code;
+	}
+
+	public void setCode(int code) {
+		this.code = code;
+	}
+	
+	
 
 }

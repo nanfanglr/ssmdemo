@@ -36,10 +36,10 @@ public class CityController {
 //			String s=null;
 //			s.length();
 			List<City> list = cityService.getList();
-			rsl.setSuccess(true);
+			rsl.setCode(1);
 			rsl.setData(list);
 		} catch (Exception e) {
-			rsl.setSuccess(false);
+			rsl.setCode(-1);
 			rsl.setError("服务异常，请稍后重试");
 		}
 		return rsl;
