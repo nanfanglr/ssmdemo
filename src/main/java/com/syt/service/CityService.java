@@ -6,7 +6,7 @@ import com.syt.entity.City;
 
 public interface CityService {
 	/**
-	 * ²éÑ¯³ÇÊĞ
+	 * è·å–åŸå¸‚æ•°æ®
 	 * @return
 	 */
     List<City> getList();

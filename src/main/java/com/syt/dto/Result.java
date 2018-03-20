@@ -1,9 +1,5 @@
 package com.syt.dto;
 
-import java.util.List;
-
-import com.syt.entity.City;
-
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 

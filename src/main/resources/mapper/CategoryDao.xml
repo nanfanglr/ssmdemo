@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.syt.dao.CategoryDao">
+    <!-- 目的：为dao接口方法提供sql语句配置 -->
+    <select id="queryCategory" resultType="Category" >
+        <!-- 具体的sql -->
+        SELECT
+            cat_id,
+            cat_name,
+            `code`,
+            seq_num,
+            type
+        FROM
+            category
+     
+    </select>
+</mapper>
