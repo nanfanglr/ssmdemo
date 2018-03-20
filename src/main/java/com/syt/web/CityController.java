@@ -28,7 +28,7 @@ public class CityController {
 	private CityService cityService;
 
 	@RequestMapping(value = "/list", method = RequestMethod.GET)
-	@ApiOperation(value = "获取城市数据", notes = "根据id获取产品信息", httpMethod = "GET")
+	@ApiOperation(value = "获取城市数据", notes = "获取全部城市相关信息", httpMethod = "GET")
 	@ResponseBody
 	private Result<List<City>> list() {
 		Result<List<City>> rsl = new Result<List<City>>();
@@ -39,6 +39,7 @@ public class CityController {
 			rsl.setCode(1);
 			rsl.setData(list);
 		} catch (Exception e) {
+			e.printStackTrace();
 			rsl.setCode(-1);
 			rsl.setError("服务异常，请稍后重试");
 		}

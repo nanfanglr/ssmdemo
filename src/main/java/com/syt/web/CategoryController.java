@@ -28,7 +28,7 @@ public class CategoryController {
 	private CategoryService categoryService;
 
 	@RequestMapping(value = "/list", method = RequestMethod.GET)
-	@ApiOperation(value = "获取栏目数据", notes = "根据id获取栏目", httpMethod = "GET")
+	@ApiOperation(value = "获取栏目数据", notes = "获取全部栏目的信息", httpMethod = "GET")
 	@ResponseBody
 	private Result<List<Category>> list() {
 		Result<List<Category>> rsl = new Result<List<Category>>();
