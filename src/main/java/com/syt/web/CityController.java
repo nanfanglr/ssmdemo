@@ -18,8 +18,8 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 
 @Controller
-@RequestMapping("/servlet")
-@Api(value = "/servlet", tags = "城市相关接口")
+@RequestMapping("/city")
+@Api(value = "/city", tags = "城市相关接口")
 public class CityController {
 
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
@@ -27,7 +27,7 @@ public class CityController {
 	@Autowired
 	private CityService cityService;
 
-	@RequestMapping(value = "/GetCityListServlet", method = RequestMethod.GET)
+	@RequestMapping(value = "/list", method = RequestMethod.GET)
 	@ApiOperation(value = "获取城市数据", notes = "根据id获取产品信息", httpMethod = "GET")
 	@ResponseBody
 	private Result<List<City>> list() {
