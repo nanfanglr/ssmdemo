@@ -16,7 +16,7 @@ import com.syt.service.CategoryService;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-
+//访问地址：http://192.168.11.24:8080/ssmdemo/category/list
 @Controller
 @RequestMapping("/category")
 @Api(value = "/category", tags = "栏目相关接口")
